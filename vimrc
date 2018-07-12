@@ -42,7 +42,6 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 map <leader>rt :!ctags -R .<CR><CR>
 
-
 " ----------------------------------------------
 " Setup NERDTree
 " ----------------------------------------------
@@ -96,3 +95,26 @@ endif
 " ----------------------------------------------
 vmap <silent> <leader>d <Plug>DashVisual
 nmap <silent> <leader>d <Plug>DashSearch
+
+
+" ----------------------------------------------
+" Setup Jonas
+" ----------------------------------------------
+set nostartofline
+
+" <Leader>i to reindent the current file
+map <silent> <leader>i  mzgg=G`z
+" <leader>y yanks to mac clipboard
+vmap <silent> <leader>y  "*y
+
+" <Leader>sw to strip whitespace off the ends
+nmap <silent> <Leader>sw :call StripTrailingWhitespace()<CR>
+
+" strip trailing whitespace
+function! StripTrailingWhitespace()
+  normal mz
+  normal Hmy
+  exec '%s/\s*$//g'
+  normal 'yz<cr>
+  normal `z
+endfunction
