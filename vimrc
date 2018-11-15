@@ -110,6 +110,9 @@ vmap <silent> <leader>y  "*y
 " <Leader>sw to strip whitespace off the ends
 nmap <silent> <Leader>sw :call StripTrailingWhitespace()<CR>
 
+" update git gutter on file save
+autocmd BufWritePost * GitGutter
+
 " strip trailing whitespace
 function! StripTrailingWhitespace()
   normal mz
