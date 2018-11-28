@@ -42,6 +42,9 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 map <leader>rt :!ctags -R .<CR><CR>
 
+" Do not replace buffer when pasting
+vnoremap p "_dP
+
 " ----------------------------------------------
 " Setup NERDTree
 " ----------------------------------------------
