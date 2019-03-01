@@ -33,6 +33,7 @@ let g:NERDSpaceDelims = 1
 
 map <silent> <Leader><Leader> :b#<CR>
 nmap <silent> <unique> <Leader>. :BufExplorer<CR>
+
 nmap <silent> <Leader>m :NERDTreeToggle<CR>
 
 nmap <silent> <leader>t :TestNearest<CR>
@@ -43,7 +44,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 map <leader>rt :!ctags -R .<CR><CR>
 
 " Do not replace buffer when pasting
-vnoremap p "_dP
+vnoremap p "_dp
 
 " ----------------------------------------------
 " Setup NERDTree
@@ -57,6 +58,7 @@ augroup FileExplorer
   au!
 augroup END
 
+let NERDTreeChDirMode = 2
 let g:NERDTreeHijackNetrw = 0
 
 " ----------------------------------------------

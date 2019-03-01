@@ -7,6 +7,7 @@ Plug 'fatih/vim-go' " Golang helpers
 Plug 'flazz/vim-colorschemes' " Selection of colour schemes
 Plug 'janko-m/vim-test' " Run tests with ,T
 Plug 'jlanzarotta/bufexplorer' " Switch between open buffers
+Plug 'jonasbleyl/macroman' " Vim pluging manager
 Plug 'kien/ctrlp.vim' " Fuzzy search
 Plug 'mileszs/ack.vim' " Search through project
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' } " Go Autocompletion Daemon
