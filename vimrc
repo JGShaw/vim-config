@@ -20,7 +20,6 @@ set background=dark
 set backupdir=/var/tmp,~/.tmp,.
 set directory=/var/tmp,~/.tmp,.
 set colorcolumn=120
-set synmaxcol=200
 set nowrap
 
 colorscheme molokai
@@ -96,11 +95,17 @@ else
 endif
 
 " ----------------------------------------------
-" Setup dash.vim
+" Setup AnsibleVaultVim
 " ----------------------------------------------
-vmap <silent> <leader>d <Plug>DashVisual
-nmap <silent> <leader>d <Plug>DashSearch
 
+let g:AnsibleVaultVimPasswordFile = ".vault"
+nmap <silent> <leader>ave :AnsibleVaultEdit<CR>
+nmap <silent> <leader>avv :AnsibleVaultView<CR>
+
+" ----------------------------------------------
+" Setup Rails
+" ----------------------------------------------
+nmap <Plug>RailsFind gf
 
 " ----------------------------------------------
 " Setup Jonas
@@ -126,3 +131,10 @@ function! StripTrailingWhitespace()
   normal 'yz<cr>
   normal `z
 endfunction
+
+function! Iterm2Strategy(cmd)
+  call system('python3 ~/Library/Application\ Support/iTerm2/Scripts/vim-test.py "' . a:cmd . '" &')
+endfunction
+
+let g:test#custom_strategies = {'iterm2': function('Iterm2Strategy')}
+let g:test#strategy = 'iterm2'

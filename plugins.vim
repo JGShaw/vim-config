@@ -1,4 +1,5 @@
 Plug 'JGShaw/dash.vim' " Dash vim integration
+Plug 'JGShaw/AnsibleVaultVim' " Dash vim integration
 Plug 'Xuyuanp/nerdtree-git-plugin' " Git for nerdtree
 Plug 'airblade/vim-gitgutter' " Show git stuff on the left
 Plug 'ajh17/VimCompletesMe' " Tab completion
@@ -16,6 +17,7 @@ Plug 'scrooloose/nerdtree' " File browser
 Plug 'sheerun/vim-polyglot' " Syntax for loads of languages
 Plug 'slashmili/alchemist.vim'
 Plug 'slime-lang/vim-slime-syntax'
+Plug 'tpope/vim-bundler' " Bundler helpers
 Plug 'tpope/vim-endwise' " Automatic ends
 Plug 'tpope/vim-projectionist' " Magic stuff
 Plug 'tpope/vim-rails' " Rails helpers
