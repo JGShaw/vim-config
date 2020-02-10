@@ -99,6 +99,7 @@ endif
 " ----------------------------------------------
 
 let g:AnsibleVaultVimPasswordFile = ".vault"
+let g:AnsibleVaultVimAutomatic = 1
 nmap <silent> <leader>ave :AnsibleVaultEdit<CR>
 nmap <silent> <leader>avv :AnsibleVaultView<CR>
 
